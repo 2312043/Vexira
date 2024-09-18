@@ -1,0 +1,97 @@
+/* Logo styles */
+.logo img {
+    width: 100px; /* Ensure the image does not exceed the container width */
+    height: 50px; /* Maintain the aspect ratio */
+    padding-left: 10%;
+    float: left;
+}
+
+/* Top navigation bar styles */
+.topnav {
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Align items at the start and end of the container */
+    align-items: center; /* Vertically center items */
+    overflow: hidden;
+    background-color: #0c0c0c;
+    border-radius: 8px;
+    padding-right: 1%;
+}
+
+/* Link styles */
+.topnav a {
+    float: right;
+    display: block;
+    color: #fff; /* White text color */
+    background-color: #0c0c0c; /* Darker background color */
+    text-align: center;
+    padding: 10px 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease; /* Add transition for smoothness */
+}
+
+/* Hover effect with rotating box shadow */
+.topnav a:hover {
+    animation: rotateBoxShadow 0.5s forwards ease-in-out; /* Run animation once and retain the final state */
+}
+
+/* Active state styles */
+.topnav a.active {
+    box-shadow: -5px 0 15px -5px #4D194D, 5px 0 15px -5px #065A60, 0 0 15px -5px #4D194D, 0 0 15px -5px #065A60;
+}
+
+/* Keyframe animation for rotating box shadow counter-clockwise */
+@keyframes rotateBoxShadow {
+    0% {
+        box-shadow: -7px 0 5px -5px #4D194D, 7px 0 5px -5px #065A60, 0 0 10px -5px #4D194D, 0 0 10px -5px #065A60;
+    }
+    25% {
+        box-shadow: 
+        0 -7px 5px -5px #4D194D, 0 7px 5px -5px #065A60, 0 0 10px -5px #4D194D, 0 0 10px -5px #065A60;
+    }
+    50% {
+        box-shadow: 7px 0 5px -5px #4D194D, -7px 0 5px -5px #065A60, 0 0 10px -5px #4D194D, 0 0 10px -5px #065A60;
+    }
+    75% {
+        box-shadow: 
+        0 7px 5px -5px #4D194D, 0 -7px 5px -5px #065A60, 0 0 10px -5px #4D194D, 0 0 10px -5px #065A60;
+    }
+    100% {
+    box-shadow: -5px 0 15px -5px #4D194D, 5px 0 15px -5px #065A60, 0 0 10px -5px #4D194D, 0 0 10px -5px #065A60;
+    }
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .topnav {
+        flex-direction: column;
+        align-items: flex-start;
+        align-items: center;
+        padding-bottom: 10px;
+        gap: 10px;
+    }
+
+    .topnav a {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        float: right;
+        margin-bottom: 10px;
+    }
+    .logo img {
+        width: 100px; /* Ensure the image does not exceed the container width */
+        height: 50px; /* Maintain the aspect ratio */
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .topnav a {
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+}

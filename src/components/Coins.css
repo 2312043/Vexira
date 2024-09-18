@@ -1,0 +1,163 @@
+/* Container and header styling */
+.data-header-content {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.header-content h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Card container styling */
+.card-c {
+    padding: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #0c0c0c;
+    color: #ccc;
+    border-radius: 8px;
+}
+
+/* Crypto list styling */
+.crypto-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Individual crypto row styling */
+.crypto-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #000000;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.crypto-logos{
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(-2px 0 2px #4D194D) drop-shadow(2px 0 2px #065A60);
+}
+/* Header row styling */
+.crypto-header {
+    background-color: #0c0c0c;
+    font-weight: bold;
+}
+
+/* Hover effect for crypto row */
+.crypto-row:hover {
+    transform: scale(1.01);
+    box-shadow: 
+    -7px 0 5px -5px #4D194D, /* Purple shadow on the left */
+    0 -5px 5px -5px #4D194D, /* Purple shadow on the top */
+    7px 0 5px -5px #065A60,  /* Green shadow on the right */
+    0 5px 5px -5px #065A60;  /* Green shadow on the bottom */
+}
+
+.crypto-header:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Crypto row item styling */
+.crypto-row > div {
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+
+.crypto-name {
+    font-weight: bold;
+    color: #fff;
+}
+
+.crypto-symbol {
+    color: #ccc;
+}
+
+.crypto-price {
+    color: #ffd700;
+}
+
+.crypto-vwap {
+    color: #1e90ff;
+}
+.crypto-row .crypto-value {
+    color: #fff;
+}
+
+.crypto-row .crypto-value.positive {
+    color: #20d35c;
+    font-weight:bolder;
+}
+
+.crypto-row .crypto-value.negative {
+    color: #c91818;
+    font-weight:bolder;
+}
+
+.btn-primary-data {
+    margin: 20px auto;
+    margin-top: 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative; /* Ensure the button is positioned relatively */
+    text-align: center;
+    background-color: #050505; /* Darker button color */
+    box-shadow: 
+    -7px 0 5px -5px #4D194D, /* Purple shadow on the left */
+    0 -5px 5px -5px #4D194D, /* Purple shadow on the top */
+    7px 0 5px -5px #065A60,  /* Green shadow on the right */
+    0 5px 5px -5px #065A60;  /* Green shadow on the bottom */
+    color: #fff; /* White text color */
+    padding: 12px 32px;
+    transition: all 0.3s ease; /* Add transition for smoothness */
+}
+
+.btn-primary-data:hover {
+    animation: rotateBoxShadow 0.5s forwards ease-in-out; /* Run animation once and retain the final state */
+}
+
+.btn-primary-data a {
+    font-family: 'Futura', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    color: #ccc; /* Lighter text color */
+    font-weight: bold;
+}
+
+.btn-primary-data a:hover {
+    text-decoration: none;
+    color: #eee; /* Lighter hover text color */
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .crypto-row {
+        grid-template-columns: repeat(7, 2fr); /* Reduce columns to 3 */
+    }
+    .crypto-row > div {
+        font-size: 10px; /* Reduce font size */
+    }
+}

@@ -1,0 +1,120 @@
+.watchlist-page {
+    padding: 20px;
+    color: #ffffff;
+    margin: 40px;
+    margin-top: 10px;
+}
+
+.watchlist-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px;
+    margin-top: 40px;
+    background: #0c0c0c;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.watchlist-item {
+    background: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ccc;
+    transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+    box-shadow: 
+        -5px 0 5px -5px #4D194D, /* Shadow on the left */
+        5px 0 5px -5px #065A60,  /* Shadow on the right */
+        0 0 10px -5px #4D194D,    /* Shadow on the top */
+        0 0 10px -5px #065A60;
+}
+
+.wcrypto-logo {
+    max-width: 50px;
+    margin-bottom: 20px;
+    filter: drop-shadow(-5px 0 5px #4D194D) drop-shadow(5px 0 5px #065A60);
+}
+
+.wcrypto-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wcrypto-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.btn-remove {
+    position: relative; /* Ensure the button is positioned relatively */
+    text-align: center;
+    background-color: #050505; /* Darker button color */
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 
+    -7px 0 5px -5px #720a0a, /* Purple shadow on the left */
+    0 -5px 5px -5px #720a0a, /* Purple shadow on the top */
+    7px 0 5px -5px #720a0a,  /* Green shadow on the right */
+    0 5px 5px -5px #720a0a;  /* Green shadow on the bottom */
+    color: #fff; /* White text color */
+    padding: 12px 22px;
+    overflow: hidden; /* Hide overflow content */
+    transition: all 0.3s ease; /* Add transition for smoothness */
+}
+
+.btn-remove:hover {
+    background-color: #720a0a;
+    box-shadow: 
+            -5px 0 15px -5px #720a0a, /* Purple shadow on the left */
+            0 -5px 15px -5px #720a0a, /* Purple shadow on the top */
+            5px 0 15px -5px #720a0a,  /* Green shadow on the right */
+            0 5px 15px -5px #720a0a;  /* Green shadow on the bottom */
+}
+
+.watchlist-item:hover {
+    box-shadow: 
+        -5px 0 15px -5px #4D194D, /* Shadow on the left */
+        5px 0 15px -5px #065A60,  /* Shadow on the right */
+        0 0 15px -5px #4D194D,    /* Shadow on the top */
+        0 0 15px -5px #065A60;    /* Shadow on the bottom */
+}
+
+.crypto-price.reached,
+.cryptos-value.reached,
+.crypto-alert.reached {
+  color: red;
+  animation: pulse 1s infinite alternate; /* Apply pulsing animation */
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
+    .watchlist-page {
+    padding: 10px;
+    color: #ffffff;
+    margin: 20px;
+    margin-top: 10px;
+}
+    .watchlist-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 20px;
+        margin-top: 40px;
+        background: #0c0c0c;
+        border-radius: 8px;
+        padding: 30px;
+    }
+}
